@@ -47,9 +47,9 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-cms-server",
+    "start": "npm run fe-build && egg-scripts start --daemon --title=egg-server-cms-server",
     "stop": "egg-scripts stop --title=egg-server-cms-server",
-    "dev": "egg-bin dev",
+    "dev": "npm run fe-start & egg-bin dev",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",
