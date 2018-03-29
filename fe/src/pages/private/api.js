@@ -25,9 +25,11 @@ let URLS = {
   getColumnsById: '/api/tablefieldconfig/',                 // 获取表字段
 }
 
-for (const key in URLS) {
-  if (URLS.hasOwnProperty(key)) {
-    URLS[key] = BASE_URL + URLS[key]
+if (window.location.href.indexOf('127.0.0.1') !== -1 || window.location.href.indexOf('localhost') !== -1) {
+  for (const key in URLS) {
+    if (URLS.hasOwnProperty(key)) {
+      URLS[key] = BASE_URL + URLS[key]
+    }
   }
 }
 
