@@ -11,8 +11,15 @@ see [egg docs][egg] for more detail.
 ### Development
 
 ```bash
+# 安装依赖
+
 $ npm i
+# 初始化数据库
+$ npm run init
+
+# 运行  
 $ npm run dev
+
 $ open http://localhost:7001/
 ```
 
