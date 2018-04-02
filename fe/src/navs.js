@@ -70,22 +70,7 @@ const customAsideNavs = [
         to: '/private/config/tablefieldconfig',
       },
     ],
-  },
-  {
-    text: '系统设置',
-    to: '/setting',
-    icon: 'shezhi',
-    children: [
-      {
-        text: '基本设置',
-        to: '/base',
-      },
-      {
-        text: '评论设置',
-        to: '/comment',
-      },
-    ],
-  },
+  }
 ];
 
 function transform(navs) {

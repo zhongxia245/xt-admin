@@ -4,11 +4,6 @@
   "description": "cms api ",
   "private": true,
   "dependencies": {
-    "egg": "^2.2.1",
-    "egg-cors": "^2.0.0",
-    "egg-mysql": "^3.0.0",
-    "egg-scripts": "^2.5.0",
-    "egg-view-nunjucks": "^2.2.0",
     "@icedesign/base": "^0.1.0",
     "@icedesign/container": "^0.1.0",
     "@icedesign/form-binder": "^0.1.4",
@@ -21,7 +16,13 @@
     "axios": "^0.18.0",
     "bizcharts": "latest",
     "classnames": "^2.2.5",
+    "egg": "^2.2.1",
+    "egg-cors": "^2.0.0",
+    "egg-mysql": "^3.0.0",
+    "egg-scripts": "^2.5.0",
+    "egg-view-nunjucks": "^2.2.0",
     "foundation-symbol": "^0.1.0",
+    "mysql2": "^1.5.3",
     "prop-types": "^15.5.8",
     "react-document-title": "^2.0.3",
     "react-router": "^3.2.0"
@@ -29,19 +30,19 @@
   "devDependencies": {
     "autod": "^3.0.1",
     "autod-egg": "^1.0.0",
+    "babel-eslint": "^8.0.3",
     "egg-bin": "^4.3.5",
     "egg-ci": "^1.8.0",
     "egg-mock": "^3.14.0",
     "eslint": "^4.11.0",
-    "eslint-config-egg": "^6.0.0",
-    "webstorm-disable-index": "^1.2.0",
-    "babel-eslint": "^8.0.3",
     "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-egg": "^6.0.0",
     "eslint-plugin-babel": "^4.1.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
-    "ice-scripts": "^1.0.2"
+    "ice-scripts": "^1.0.2",
+    "webstorm-disable-index": "^1.2.0"
   },
   "engines": {
     "node": ">=8.9.0"
@@ -50,6 +51,7 @@
     "start": "npm run fe-build && egg-scripts start --daemon --title=egg-server-cms-server",
     "stop": "egg-scripts stop --title=egg-server-cms-server",
     "dev": "npm run fe-start & egg-bin dev",
+    "init": "node ./db/initdb.js",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",
